@@ -39,7 +39,7 @@ Return the position of the sensor from 0 (0° angle) to 1 (maximum angle).
 Set the maximum position of the rotary sensor.
 
 Parameters:
-- maxPosition: A number between 0 and 1023 corresponding to the maximum angle at the output of the A/D converter
+- `maxPosition`: A number between 0 and 1023 corresponding to the maximum angle at the output of the A/D converter
 
 ###`void turnOnLED()`
 Turn the embedded LED on
