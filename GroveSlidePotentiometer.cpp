@@ -25,7 +25,7 @@ float GroveSlidePotentiometer::getPosition() {
 	return position;
 }
 
-void GroveSlidePotentiometer::setMaxMesurement(float maxMesurement) {	
+void GroveSlidePotentiometer::setMaxMesurement(unsigned int maxMesurement) {	
 	this->_maxMesurement = maxMesurement;
 }
 
