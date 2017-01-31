@@ -5,13 +5,12 @@ Slide Potentiometer Library for Arduino + Grove shield
 
 ##Example
 ```c++
-#include <Grove.h>
 #include <GroveSlidePotentiometer.h>
 
-GroveSlidePotentiometer slide(GROVE_A0);
+GroveSlidePotentiometer slide;
 
 void setup() {
-  slide.initialize();
+  slide.initialize(GROVE_A0);
   Serial.begin(9200);
 }
 
@@ -24,13 +23,12 @@ void loop() {
 
 ##Documentation
 
-###`GroveSlidePotentiometer(GrovePin pins, unsigned int maxMesurement = 1023)`
+###`void initialize(GrovePin pins, unsigned int maxMesurement = 1023)`
+Initialize the sensor before using it.
+
 Parameters:
 - `pins`: Must be a analog socket (GROVE_A0 to GROVE_A3)
 - `maxMesurement`: The A/D converter value corresponding to the maximum angle (from 0 to 1023)
-
-###`void initialize()`
-Initialize the sensor before using it.
 
 ###`float getPosition()`
 Return the position of the sensor from 0 (0° angle) to 1 (maximum angle).

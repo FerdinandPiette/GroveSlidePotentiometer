@@ -1,17 +1,16 @@
 #include "GroveSlidePotentiometer.h"
 
-GroveSlidePotentiometer::GroveSlidePotentiometer(GrovePin pins, unsigned int maxMesurement) {
-	this->_led = new GroveLED(pins);
-	this->_pinSensor = pins.pin1;
-	this->setMaxMesurement(maxMesurement);
-}
+GroveSlidePotentiometer::GroveSlidePotentiometer() {}
 
 GroveSlidePotentiometer::~GroveSlidePotentiometer() {
 	delete this->_led;
 }
 
-void GroveSlidePotentiometer::initialize() {	
-	this->_led->initialize();
+void GroveSlidePotentiometer::initialize(GrovePin pins, unsigned int maxMesurement) {
+	this->_led = new GroveLED();
+	this->_led->initialize(pins);
+	this->_pinSensor = pins.pin1;
+	this->setMaxMesurement(maxMesurement);
 }
 
 unsigned int GroveSlidePotentiometer::_performMesurement() {

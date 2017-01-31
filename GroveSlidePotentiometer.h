@@ -15,9 +15,9 @@ class GroveSlidePotentiometer {
 		unsigned int _performMesurement(); 
 
 	public:
-		GroveSlidePotentiometer(GrovePin pins, unsigned int maxMesurement = 1023);
+		GroveSlidePotentiometer();
 		virtual ~GroveSlidePotentiometer();
-		void initialize();
+		void initialize(GrovePin pins, unsigned int maxMesurement = 1023);
 		float getPosition();
 		void setMaxMesurement(unsigned int maxMesurement);
 		void turnOnLED();
